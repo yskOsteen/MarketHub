@@ -1,0 +1,23 @@
+package com.Austin.markethub.ui.screens.onboarding
+
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+
+@Composable
+fun OnBoarding3Screen(navController: NavController){
+    Column(
+        modifier = Modifier.fillMaxSize()
+    ) { }
+
+}
+
+@Preview(showBackground = true)
+@Composable
+fun OnBoarding3ScreenPreview(){
+    OnBoarding3Screen(rememberNavController())
+}
