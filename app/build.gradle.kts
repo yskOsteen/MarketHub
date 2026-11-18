@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.Austin.markethub"
+    namespace = "com.austin.markethub"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.Austin.markethub"
+        applicationId = "com.austin.markethub"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
@@ -55,6 +55,8 @@ dependencies {
     //Navigation
     implementation("androidx.navigation:navigation-runtime-ktx:2.10.2")
     implementation("androidx.navigation:navigation-compose:2.10.2")
+    //Icons
+    implementation("androidx.compose.material:material-icons-core:1.7.8")
 
 
 }

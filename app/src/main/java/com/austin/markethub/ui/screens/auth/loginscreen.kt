@@ -1,4 +1,4 @@
-package com.Austin.markethub.ui.screens.onboarding
+package com.austin.markethub.ui.screens.auth
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,7 +9,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun OnBoarding3Screen(navController: NavController){
+fun LoginScreen(navController: NavController){
     Column(
         modifier = Modifier.fillMaxSize()
     ) { }
@@ -18,6 +18,8 @@ fun OnBoarding3Screen(navController: NavController){
 
 @Preview(showBackground = true)
 @Composable
-fun OnBoarding3ScreenPreview(){
-    OnBoarding3Screen(rememberNavController())
-}
+fun LoginScreenPreview(){
+    LoginScreen(rememberNavController())
+
+    }
+

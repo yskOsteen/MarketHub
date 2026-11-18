@@ -1,4 +1,4 @@
-package com.Austin.markethub.navigation
+package com.austin.markethub.navigation
 
 
 import androidx.compose.runtime.Composable
@@ -7,17 +7,17 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.Austin.markethub.ui.screens.auth.LoginScreen
-import com.Austin.markethub.ui.screens.auth.RegisterScreen
-import com.Austin.markethub.ui.screens.users.HomeScreen
-import com.Austin.markethub.ui.screens.onboarding.OnBoarding1Screen
-import com.Austin.markethub.ui.screens.onboarding.OnBoarding2Screen
+import com.austin.markethub.ui.screens.auth.LoginScreen
+import com.austin.markethub.ui.screens.auth.RegisterScreen
+import com.austin.markethub.ui.screens.home.HomeScreen
+import com.austin.markethub.ui.screens.onboarding.OnBoarding1Screen
+import com.austin.markethub.ui.screens.onboarding.OnBoarding2Screen
 
 @Composable
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUT_ONBOARDING1
+    startDestination: String = ROUT_HOME
 ) {
 
     NavHost(

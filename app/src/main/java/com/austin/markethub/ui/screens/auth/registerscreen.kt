@@ -1,4 +1,4 @@
-package com.Austin.markethub.ui.screens.users
+package com.austin.markethub.ui.screens.auth
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,15 +9,15 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun HomeScreen(navController: NavController){
-
+fun RegisterScreen(navController: NavController){
     Column(
         modifier = Modifier.fillMaxSize()
     ) { }
+
 }
 
 @Preview(showBackground = true)
 @Composable
-fun HomeScreenPreview(){
-    HomeScreen(rememberNavController())
+fun RegisterScreenPreview(){
+    RegisterScreen(rememberNavController())
 }

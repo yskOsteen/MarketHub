@@ -1,4 +1,4 @@
-package com.Austin.markethub.navigation
+package com.austin.markethub.navigation
 
 const val ROUT_LOGIN = "login"
 const val ROUT_REGISTER = "register"

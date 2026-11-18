@@ -1,4 +1,4 @@
-package com.Austin.markethub.ui.screens.onboarding
+package com.austin.markethub.ui.screens.onboarding
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -7,9 +7,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -21,8 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.Austin.markethub.R
-import com.Austin.markethub.navigation.ROUT_ONBOARDING2
+import com.austin.markethub.R
 
 
 @Composable
@@ -55,15 +51,15 @@ fun OnBoarding1Screen(navController: NavController){
             text = "MarketHub is a modern ecommerce platform designed to connect local artisans and global shoppers in one seamless digital space. By blending intuitive search tools with personalized storefront recommendations, the site makes discovering unique goods both fast and effortless. Sellers benefit from real-time inventory tracking, automated shipping labels, and integrated payment processing that supports multiple currencies. Whether a customer is browsing for handcrafted home decor or everyday tech accessories, MarketHub ensures every transaction is backed by verified buyer reviews and reliable customer support."
         )
 
-        Button(
-            onClick = {navController.navigate(ROUT_ONBOARDING2)},
-            colors = ButtonDefaults.buttonColors(androidx.compose.ui.graphics.Color.Magenta),
-            shape = RoundedCornerShape(10.dp),
-
-            )
-        {
-            Text( text = "Get Started")
-        }
+//        Button(
+////            onClick = {navController.navigate(ROUT_ONBOARDING2)},
+//            colors = ButtonDefaults.buttonColors(androidx.compose.ui.graphics.Color.Magenta),
+//            shape = RoundedCornerShape(10.dp),
+//
+//            )
+//        {
+//            Text( text = "Get Started")
+//        }
 
 
     }

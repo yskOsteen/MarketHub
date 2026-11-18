@@ -1,4 +1,4 @@
-package com.Austin.markethub.ui.screens.onboarding
+package com.austin.markethub.ui.screens.onboarding
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.Austin.markethub.R
+import com.austin.markethub.R
 
 
 

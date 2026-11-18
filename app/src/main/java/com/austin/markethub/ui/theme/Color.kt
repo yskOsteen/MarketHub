@@ -1,4 +1,4 @@
-package com.Austin.markethub.ui.theme
+package com.austin.markethub.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

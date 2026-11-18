@@ -1,4 +1,4 @@
-package com.Austin.markethub
+package com.austin.markethub
 
 import org.junit.Test
 
