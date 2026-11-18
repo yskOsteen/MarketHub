@@ -1,11 +1,15 @@
 package com.austin.markethub.ui.screens.home
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
@@ -22,7 +26,10 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -35,73 +42,98 @@ import com.austin.markethub.navigation.ROUT_ONBOARDING2
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(navController: NavController){
+fun HomeScreen(navController: NavController) {
+    Column(modifier = Modifier.fillMaxSize()) {
+        TopAppBar(
+            title = { Text(text = "Home") },
 
-    Scaffold { innerPadding ->
-        Column(modifier =Modifier.padding(innerPadding).padding(16.dp))
+            navigationIcon = {
+                IconButton(onClick = {}) {
+                    Icon(imageVector = Icons.Default.Home, contentDescription = "Navigate to Home")
+                }
+
+            },
+            actions = {
+                IconButton(onClick = {}) {
+                    Icon(
+                        imageVector = Icons.Default.ShoppingCart,
+                        contentDescription = "Shopping Cart"
+                    )
+                }
+                IconButton(onClick = {}) {
+                    Icon(imageVector = Icons.Default.Menu, contentDescription = "Menu")
+                }
+            },
+            colors = TopAppBarDefaults.topAppBarColors(
+                navigationIconContentColor = Color.Blue,
+                containerColor = Color.Black,
+                titleContentColor = Color.White,
+                actionIconContentColor = Color.White
+            )
+
+
+        )
+
+
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+
+        Row (
+            modifier = Modifier.horizontalScroll(rememberScrollState())
+
+        )
         {
 
-            TopAppBar(
-                title = { Text(text = "Home") },
-
-                navigationIcon = {
-                    IconButton(onClick = {}) {
-                        Icon(imageVector = Icons.Default.Home, contentDescription = "Menu")}
-
-                },
-                actions = {
-                    IconButton(onClick = {}) {
-                        Icon(imageVector = Icons.Default.ShoppingCart, contentDescription = "Shopping Cart")
-                    }
-                    IconButton(onClick = {}) {
-                        Icon(imageVector = Icons.Default.Menu, contentDescription = "Menu")
-                    }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    navigationIconContentColor = Color.Blue,
-                    containerColor = Color.Black,
-                    titleContentColor = Color.White,
-                    actionIconContentColor = Color.White
-                )
-
-
-            )
-
-            Text(
-                text = "Shop Now. Live Better",
-                fontSize = 20.sp,
-                fontWeight = FontWeight.Bold,
-                color = androidx.compose.ui.graphics.Color.Magenta
-            )
-
             Image(
-                painter = painterResource(R.drawable.img),
+                painter = painterResource(R.drawable.fight),
                 contentDescription = "MarketHub Logo",
                 modifier = Modifier
-                    .height(100.dp)
-                    .width(300.dp)
-            )
+                    .height(200.dp)
+                    .width(200.dp)
+                    .clip(shape = RoundedCornerShape(15.dp)),
+                contentScale = ContentScale.Crop
 
-            Spacer(modifier = Modifier.height(20.dp))
-
-            Text(
-                text = "MarketHub is a modern ecommerce platform designed to connect local artisans and global shoppers in one seamless digital space. By blending intuitive search tools with personalized storefront recommendations, the site makes discovering unique goods both fast and effortless. Sellers benefit from real-time inventory tracking, automated shipping labels, and integrated payment processing that supports multiple currencies. Whether a customer is browsing for handcrafted home decor or everyday tech accessories, MarketHub ensures every transaction is backed by verified buyer reviews and reliable customer support."
-            )
-
-            Button(
-                onClick = {navController.navigate(ROUT_ONBOARDING2)},
-                colors = ButtonDefaults.buttonColors(androidx.compose.ui.graphics.Color.Magenta),
-                shape = RoundedCornerShape(10.dp),
 
                 )
-            {
-                Text( text = "Get Started")
-            }
+            Spacer(modifier = Modifier.width(2.dp))
+            Image(
+                painter = painterResource(R.drawable.him),
+                contentDescription = "MarketHub Logo",
+                modifier = Modifier
+                    .height(200.dp)
+                    .width(200.dp)
+                    .clip(shape = RoundedCornerShape(15.dp)),
+                contentScale = ContentScale.Crop
 
+                )
+            Spacer(modifier = Modifier.width(20.dp))
+            Image(
+                painter = painterResource(R.drawable.umb),
+                contentDescription = "MarketHub Logo",
+                modifier = Modifier
+                    .height(200.dp)
+                    .width(200.dp)
+                    .clip(shape = RoundedCornerShape(15.dp)),
+                contentScale = ContentScale.Crop
 
+            )
+            Spacer(modifier = Modifier.width(20.dp))
+            Image(
+                painter = painterResource(R.drawable.photo),
+                contentDescription = "MarketHub Logo",
+                modifier = Modifier
+                    .height(200.dp)
+                    .width(200.dp)
+                    .clip(shape = RoundedCornerShape(15.dp)),
+                contentScale = ContentScale.Crop
 
+            )
 
         }
+
+
+
     }
 }
 

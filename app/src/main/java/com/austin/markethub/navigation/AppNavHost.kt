@@ -10,6 +10,7 @@ import androidx.navigation.compose.rememberNavController
 import com.austin.markethub.ui.screens.auth.LoginScreen
 import com.austin.markethub.ui.screens.auth.RegisterScreen
 import com.austin.markethub.ui.screens.home.HomeScreen
+import com.austin.markethub.ui.screens.intent.IntentScreen
 import com.austin.markethub.ui.screens.onboarding.OnBoarding1Screen
 import com.austin.markethub.ui.screens.onboarding.OnBoarding2Screen
 
@@ -55,6 +56,9 @@ fun AppNavHost(
 
         composable(ROUT_ONBOARDING3) {
             OnBoarding1Screen(navController)
+        }
+        composable (ROUT_INTENT){
+            IntentScreen(navController)
         }
     }
 
