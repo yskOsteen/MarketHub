@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.ShoppingCart
@@ -38,6 +39,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.austin.markethub.R
+import com.austin.markethub.navigation.ROUT_INTENT
 import com.austin.markethub.navigation.ROUT_ONBOARDING2
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -60,8 +62,8 @@ fun HomeScreen(navController: NavController) {
                         contentDescription = "Shopping Cart"
                     )
                 }
-                IconButton(onClick = {}) {
-                    Icon(imageVector = Icons.Default.Menu, contentDescription = "Menu")
+                IconButton(onClick = {navController.navigate(ROUT_INTENT)}) {
+                    Icon(imageVector = Icons.Default.ArrowForward, contentDescription = "Forward")
                 }
             },
             colors = TopAppBarDefaults.topAppBarColors(

@@ -7,6 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.austin.markethub.ui.screens.splash.SplashScreen
 import com.austin.markethub.ui.screens.auth.LoginScreen
 import com.austin.markethub.ui.screens.auth.RegisterScreen
 import com.austin.markethub.ui.screens.home.HomeScreen
@@ -18,7 +19,7 @@ import com.austin.markethub.ui.screens.onboarding.OnBoarding2Screen
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUT_HOME
+    startDestination: String = ROUT_SPLASH
 ) {
 
     NavHost(
@@ -59,6 +60,9 @@ fun AppNavHost(
         }
         composable (ROUT_INTENT){
             IntentScreen(navController)
+        }
+        composable (ROUT_SPLASH){
+            SplashScreen(navController,)
         }
     }
 

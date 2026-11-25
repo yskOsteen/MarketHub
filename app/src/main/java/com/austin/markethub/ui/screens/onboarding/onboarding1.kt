@@ -57,7 +57,7 @@ fun OnBoarding1Screen(navController: NavController){
         )
 
         Button(
-            onClick = {navController.navigate(ROUT_HOME)},
+            onClick = {navController.navigate(ROUT_ONBOARDING2)},
             colors = ButtonDefaults.buttonColors(androidx.compose.ui.graphics.Color.Magenta),
             shape = RoundedCornerShape(10.dp),
 
